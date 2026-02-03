@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+body {
+  margin: 0;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+#instructions {
+  display: none;
+}
+
+#results,
+body:hover #instructions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+
+#results {
+  display: none;
+  cursor: default;
+}
+
+#results .content,
+#instructions .content {
+  max-width: 300px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#results {}
+
+#score {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  top: 30px;
+  right: 30px;
+}
+/* ===== WATERMARK ===== */
+body::after {
+  content: "© SUMIT-2025";
+  position: fixed;
+  bottom: 16px;
+  right: 18px;
+
+  font-family: "Montserrat", monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.18);
+  -webkit-text-stroke: 0.4px rgba(0, 150, 255, 0.45);
+  text-shadow: 0 0 3px rgba(0, 150, 255, 0.3);
+
+  pointer-events: none;
+  user-select: none;
+  z-index: 999999;
+}
+/* ===== GAME TITLE ===== */
+#game-title {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow:
+    0 0 8px rgba(0, 150, 255, 0.6),
+    0 0 20px rgba(0, 150, 255, 0.35);
+
+  pointer-events: none;   /* IMPORTANT: game clicks still work */
+  user-select: none;
+  z-index: 999999;
+}
